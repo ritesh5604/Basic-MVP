@@ -1,0 +1,11 @@
+{
+    "Software Engineer": {
+      "USA": {"avg_salary": 100000, "range": "90K-110K"},
+      "India": {"avg_salary": 1200000, "range": "10L-15L"}
+    },
+    "Data Scientist": {
+      "USA": {"avg_salary": 110000, "range": "100K-120K"},
+      "India": {"avg_salary": 1400000, "range": "12L-18L"}
+    }
+  }
+  
