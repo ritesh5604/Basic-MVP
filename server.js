@@ -6,7 +6,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 
 const app = express();
-const cors = require("cors");
+
 
 // Allow requests from your frontend domain
 app.use(cors({
