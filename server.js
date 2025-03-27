@@ -4,8 +4,9 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
+
 const app = express();
-app.use(cors({ origin: "http://localhost:5173" })); // Updated to match frontend port
+app.use(cors({ origin: "http://localhost:5173" })); 
 app.use(bodyParser.json());
 
 const gemini = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
@@ -87,7 +88,7 @@ app.post("/analyze", async (req, res) => {
 
     // Always calculate red_flag_score based on red_flags.length, ignoring the model's value
     const redFlagScore = results.red_flags.length > 0
-      ? Math.min(10, results.red_flags.length * 3) // 3 points per red flag, max 10
+      ? Math.min(10, results.red_flags.length * 1) // 3 points per red flag, max 10
       : 0;
     results.red_flag_score = redFlagScore;
     console.log("🟢 Calculated red_flag_score:", results.red_flag_score);
@@ -122,5 +123,5 @@ app.post("/analyze", async (req, res) => {
   }
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000
 app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));

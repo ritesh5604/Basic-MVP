@@ -8,5 +8,8 @@
     "fuzzball": "^2.1.6",
     "natural": "^8.0.1",
     "sentiment": "^5.0.2"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.16.2"
   }
 }
