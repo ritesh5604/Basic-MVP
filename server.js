@@ -6,7 +6,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 
 const app = express();
-app.use(cors({ origin: "http://localhost:5173" })); 
+app.use(cors({ origin: "https://basic-mvp-ritesh5604s-projects.vercel.app/" })); 
 app.use(bodyParser.json());
 
 const gemini = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
