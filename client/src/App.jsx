@@ -22,8 +22,8 @@ function App() {
 
     try {
       console.log("🟢 Request payload:", { jobDescription });
-      console.log("🟢 Sending fetch request to http://127.0.0.1:5000/analyze");
-      const response = await fetch("http://127.0.0.1:5000/analyze", {
+      console.log("🟢 Sending fetch request to https://basic-mvp-2.onrender.com");
+      const response = await fetch("https://basic-mvp-2.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ jobDescription }),
